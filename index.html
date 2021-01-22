@@ -32,7 +32,6 @@
             encryptedHTML = encryptedMsg.substring(64),
             decryptedHMAC = CryptoJS.HmacSHA256(encryptedHTML, CryptoJS.SHA256(passphrase).toString()).toString();
 
-
         var plainHTML = decrypt(encryptedHTML, passphrase);
 
         document.write(plainHTML);
